@@ -43,6 +43,15 @@ class LinkedList():
         self.tail = None
         self.size: int = 0
 
+    def __hash__(self):
+        elements = []
+        current = self.head
+        while current:
+            elements.append(current.data)
+            next_node = current.rightPtr
+            current = next_node
+        return hash(elements)
+        
     def sort(self):
         if self.size <= 1:
             return self

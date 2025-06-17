@@ -20,8 +20,9 @@ def main():
     print(my_list)  # LinkedList: [1 -> 5 -> 7 -> 10 -> 20 -> 30]
     print(f"Length: {len(my_list)}") # 6
 
-    # Test __lt__ with sort()
     print("Sorted List:", my_list.sort())
+    
+    print("List Hash:", my_list.hash())
 
     print(f"Get element at index 2: {my_list.get(2)}") # 7
     print(f"Search for 10: {my_list.search(10)}") # True
